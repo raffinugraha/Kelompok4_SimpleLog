@@ -29,7 +29,7 @@ Kelompok4_SimpleLog/
 │   ├── test4_semantic_error.sl
 │   └── test5_complex.sl
 ├── docs/
-│   └── LAPORAN PROJEK UAS TK KEL 4.docx
+│   └── LAPORAN PROJEK UAS TK KEL 4.pdf
 └── README.md
 ```
 
@@ -41,7 +41,7 @@ Kelompok4_SimpleLog/
 - **Pernyataan:** deklarasi (`boolean x = ...;`), assignment (`x = ...;`), `print(...)`
 - **Komentar:** satu baris menggunakan `--`
 
-Grammar BNF lengkap tersedia di laporan (`docs/Laporan_Kelompok4_SimpleLog.pdf`, Bab 2).
+Grammar BNF lengkap tersedia di laporan (`docs/LAPORAN PROJEK UAS TK KEL 4.pdf`, Bab 2).
 
 ## Cara Menjalankan
 
@@ -61,7 +61,7 @@ python compiler.py --demo
 
 ### Mode File (kompilasi file SimpleLog sendiri)
 ```bash
-python compiler.py tests/test1_valid.sl --all
+python compiler.py ../tests/test1_valid.sl --all
 ```
 
 ### Opsi CLI
@@ -113,10 +113,14 @@ Setiap tahap berhenti otomatis jika ditemukan error, agar tidak melanjutkan pros
 | `test4_semantic_error.sl` | Deklarasi ganda & variabel tak terdefinisi | Gagal — 3 error semantik |
 | `test5_complex.sl` | Ekspresi `AND`/`OR`/`NOT` bersarang | Berhasil — 48 token, 41 instruksi TAC awal |
 
-Jalankan seluruh test sekaligus:
+Jalankan seluruh test sekaligus (dari dalam folder `src/`):
 ```bash
-for f in tests/*.sl; do python compiler.py "$f"; done
+for f in ../tests/*.sl; do python compiler.py "$f"; done
 ```
+> Di PowerShell (Windows), gunakan:
+> ```powershell
+> Get-ChildItem ..\tests\*.sl | ForEach-Object { python compiler.py $_.FullName }
+> ```
 
 ## Teknik yang Diimplementasikan
 
@@ -128,7 +132,7 @@ for f in tests/*.sl; do python compiler.py "$f"; done
 
 ## Laporan Lengkap
 
-Dokumentasi detail (latar belakang, desain grammar BNF, arsitektur, implementasi, dan hasil pengujian) tersedia di `docs/Laporan_Kelompok4_SimpleLog.pdf`.
+Dokumentasi detail (latar belakang, desain grammar BNF, arsitektur, implementasi, dan hasil pengujian) tersedia di `docs/LAPORAN PROJEK UAS TK KEL 4.pdf`.
 
 ## Batasan
 
