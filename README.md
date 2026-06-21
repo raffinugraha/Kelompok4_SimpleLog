@@ -51,7 +51,7 @@ Grammar BNF lengkap tersedia di laporan (`docs/LAPORAN PROJEK UAS TK KEL 4.pdf`,
 ### Instalasi
 ```bash
 git clone [URL_REPOSITORY_INI]
-cd UAS_TEKNIK_KOMPILASI_KELOMPOK_4/src
+cd Kelompok4_SimpleLog/src
 ```
 
 > **Penting:** semua perintah `python compiler.py ...` di bawah ini harus dijalankan dari dalam folder `src/`, karena `compiler.py` berada di sana dan mengimpor modul lain (`scanner.py`, `parser.py`, dst.) yang juga ada di `src/`.
