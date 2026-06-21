@@ -14,13 +14,14 @@ if (a AND NOT b) {
 ## Struktur Proyek
 
 ```
-KEL_4/
-├── scanner.py              # Analisis leksikal (kode sumber -> token)
-├── parser.py                # Analisis sintaks (token -> AST)
-├── semantic.py               # Analisis semantik (symbol table & validasi tipe)
-├── icg.py                    # Pembuatan kode antara (AST -> Three Address Code)
-├── optimizer.py               # Optimasi (constant folding & dead code elimination)
-├── compiler.py                # Error handling + integrasi seluruh pipeline + CLI
+Kelompok4_SimpleLog/
+│   ├── src/
+│   ├── scanner.py              # Analisis leksikal (kode sumber -> token)
+│   ├── parser.py                # Analisis sintaks (token -> AST)
+│   ├── semantic.py               # Analisis semantik (symbol table & validasi tipe)
+│   ├── icg.py                    # Pembuatan kode antara (AST -> Three Address Code)
+│   ├── optimizer.py               # Optimasi (constant folding & dead codeelimination)
+│   ├──compiler.py                # Error handling + integrasi seluruh pipeline + CLI
 ├── tests/
 │   ├── test1_valid.sl
 │   ├── test2_lexical_error.sl
@@ -28,7 +29,7 @@ KEL_4/
 │   ├── test4_semantic_error.sl
 │   └── test5_complex.sl
 ├── docs/
-│   └── Laporan_Kelompok4_SimpleLog.pdf
+│   └── LAPORAN PROJEK UAS TK KEL 4.docx
 └── README.md
 ```
 
