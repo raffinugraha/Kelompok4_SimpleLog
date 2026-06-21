@@ -51,8 +51,10 @@ Grammar BNF lengkap tersedia di laporan (`docs/LAPORAN PROJEK UAS TK KEL 4.pdf`,
 ### Instalasi
 ```bash
 git clone [URL_REPOSITORY_INI]
-cd KEL_4
+cd UAS_TEKNIK_KOMPILASI_KELOMPOK_4/src
 ```
+
+> **Penting:** semua perintah `python compiler.py ...` di bawah ini harus dijalankan dari dalam folder `src/`, karena `compiler.py` berada di sana dan mengimpor modul lain (`scanner.py`, `parser.py`, dst.) yang juga ada di `src/`.
 
 ### Mode Demo (4 skenario uji bawaan, tanpa perlu file)
 ```bash
@@ -60,6 +62,8 @@ python compiler.py --demo
 ```
 
 ### Mode File (kompilasi file SimpleLog sendiri)
+
+Karena folder `tests/` berada di **luar** `src/` (sejajar, bukan di dalamnya), gunakan `../tests/` untuk mengaksesnya dari dalam `src/`:
 ```bash
 python compiler.py ../tests/test1_valid.sl --all
 ```
